@@ -36,7 +36,7 @@ function playSong() {
 
 // Pause song
 function pauseSong() {
-  musicContainer.classList.add('pause');
+  musicContainer.classList.remove('play');
   playBtn.querySelector('i.fas').classList.add('fa-play');
   playBtn.querySelector('i.fas').classList.remove('fa-pause');
 
@@ -63,6 +63,14 @@ function nextSong() {
   loadSong(songs[songIndex]);
 
   playSong();
+}
+
+// Update progress bar
+function updateProgress(e) {
+  // Can get duration and current time of song from srcElement
+  const { duration, currentTime } = e.srcElement;
+  const progressPercent = (currentTime / duration) * 100;
+  progress.style.width = `${progressPercent}%`;
 }
 
 // Event listeners
@@ -92,3 +100,6 @@ document.addEventListener('keydown', (e) => {
       break;
   }
 });
+
+// Time/song update event
+audio.addEventListener('timeupdate', updateProgress);
