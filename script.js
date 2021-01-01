@@ -49,3 +49,11 @@ playBtn.addEventListener('click', () => {
 
   isPlaying ? pauseSong() : playSong();
 });
+
+document.addEventListener('keydown', (e) => {
+  // keyCode is deprecated
+  if (e.code === 'Space') {
+    const isPlaying = musicContainer.classList.contains('play');
+    isPlaying ? pauseSong() : playSong();
+  }
+});
