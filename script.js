@@ -76,19 +76,19 @@ playBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 
-// document.addEventListener('keydown', (e) => {
-//   // keyCode is deprecated; see https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
+document.addEventListener('keydown', (e) => {
+  // keyCode is deprecated; see https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
 
-//   switch (e.code) {
-//     case 'ArrowLeft':
-//       prevSong();
-//       break;
-//     case 'ArrowRight':
-//       // nextSong();
-//       break;
-//     case 'Space':
-//       const isPlaying = musicContainer.classList.contains('play');
-//       isPlaying ? pauseSong() : playSong();
-//       break;
-//   }
-// });
+  switch (e.code) {
+    case 'ArrowLeft':
+      prevSong();
+      break;
+    case 'ArrowRight':
+      // nextSong();
+      break;
+    case 'Space':
+      const isPlaying = musicContainer.classList.contains('play');
+      isPlaying ? pauseSong() : playSong();
+      break;
+  }
+});
