@@ -43,6 +43,17 @@ function pauseSong() {
   audio.pause();
 }
 
+// Previous song
+function prevSong() {
+  songIndex--;
+
+  songIndex < 0 && (songIndex = songs.length - 1);
+
+  loadSong(songs[songIndex]);
+
+  playSong();
+}
+
 // Event listeners
 playBtn.addEventListener('click', () => {
   const isPlaying = musicContainer.classList.contains('play');
@@ -50,10 +61,23 @@ playBtn.addEventListener('click', () => {
   isPlaying ? pauseSong() : playSong();
 });
 
-document.addEventListener('keydown', (e) => {
-  // keyCode is deprecated
-  if (e.code === 'Space') {
-    const isPlaying = musicContainer.classList.contains('play');
-    isPlaying ? pauseSong() : playSong();
-  }
-});
+// Change song
+prevBtn.addEventListener('click', prevSong);
+// nextBtn.addEventListener('click', nextSong);
+
+// document.addEventListener('keydown', (e) => {
+//   // keyCode is deprecated; see https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
+
+//   switch (e.code) {
+//     case 'ArrowLeft':
+//       prevSong();
+//       break;
+//     case 'ArrowRight':
+//       // nextSong();
+//       break;
+//     case 'Space':
+//       const isPlaying = musicContainer.classList.contains('play');
+//       isPlaying ? pauseSong() : playSong();
+//       break;
+//   }
+// });
