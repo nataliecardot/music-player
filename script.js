@@ -54,6 +54,17 @@ function prevSong() {
   playSong();
 }
 
+// Next song
+function nextSong() {
+  songIndex++;
+
+  songIndex < songIndex.length - 1 && (songIndex = 0);
+
+  loadSong(songs[songIndex]);
+
+  playSong();
+}
+
 // Event listeners
 playBtn.addEventListener('click', () => {
   const isPlaying = musicContainer.classList.contains('play');
@@ -63,7 +74,7 @@ playBtn.addEventListener('click', () => {
 
 // Change song
 prevBtn.addEventListener('click', prevSong);
-// nextBtn.addEventListener('click', nextSong);
+nextBtn.addEventListener('click', nextSong);
 
 // document.addEventListener('keydown', (e) => {
 //   // keyCode is deprecated; see https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
