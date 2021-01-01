@@ -73,6 +73,18 @@ function updateProgress(e) {
   progress.style.width = `${progressPercent}%`;
 }
 
+// Set progress bar (clicking progress bar allows you to skip to that location in song)
+function setProgress(e) {
+  // setProgress function is given as a parameter for the progressContainer 'click' event listener, so `this` is progressContainer element. So, getting inner width of progressContainer element in px
+  const width = this.clientWidth;
+  // offset in the X coordinate of mouse pointer between that event and padding edge of target node
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+
+  // Set current time to clicked position
+  audio.currentTime = (clickX / width) * duration;
+}
+
 // Event listeners
 playBtn.addEventListener('click', () => {
   const isPlaying = musicContainer.classList.contains('play');
@@ -103,3 +115,6 @@ document.addEventListener('keydown', (e) => {
 
 // Time/song update event
 audio.addEventListener('timeupdate', updateProgress);
+
+// Click on progress bar
+progressContainer.addEventListener('click', setProgress);
