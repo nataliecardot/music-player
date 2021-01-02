@@ -104,7 +104,7 @@ document.addEventListener('keydown', (e) => {
       prevSong();
       break;
     case 'ArrowRight':
-      // nextSong();
+      nextSong();
       break;
     case 'Space':
       const isPlaying = musicContainer.classList.contains('play');
