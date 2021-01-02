@@ -26,6 +26,7 @@ const songs = [
   'Britney Spears - (You Drive Me) Crazy',
   "Destiny's Child - Say My Name",
   "Blink 182 - What's My Age Again",
+  'Will Smith - Wild Wild West',
 ];
 
 // Keep track of song
