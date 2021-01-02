@@ -13,6 +13,7 @@ const cover = document.getElementById('cover');
 const songs = [
   'Christina Aguilera - Genie In a Bottle',
   'Eminem - My Name Is',
+  "Destiny's Child - Bills, Bills, Bills",
   'TLC - No Scrubs',
   "Ricky Martin - Livin' la Vida Loca",
   'Santana feat. Rob Thomas - Smooth',
