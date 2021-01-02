@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap");
 
+:root {
+  --button-theme: rgba(173, 17, 69, 0.7);
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   background-image: linear-gradient(
-    0deg,
-    rgba(247, 247, 247, 1) 23.8%,
-    rgba(252, 221, 221, 1) 92%
+    to top,
+    #fff 23.8%,
+    rgba(173, 17, 69, 0.8) 92%
   );
   height: 100vh;
   display: flex;
@@ -21,20 +25,21 @@ body {
 }
 
 h1 {
-  margin-bottom: 0;
-  font-size: 2.5em;
-  color: rgb(173, 17, 69);
+  margin-bottom: 0.5em;
+  letter-spacing: 2px;
+  font-size: 2.6em;
+  color: #fff;
   font-family: "Bungee Outline", sans-serif;
 }
 
 .music-container {
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+  box-shadow: 0 20px 20px 0 rgba(173, 17, 69, 0.6);
   display: flex;
   padding: 20px 30px;
   position: relative;
-  margin: 60px 0 100px 0;
+  margin: 50px 0 100px 0;
   /* Element with higher z-index is displayed in front */
   z-index: 10;
 }
@@ -95,7 +100,7 @@ h1 {
 .action-btn {
   background-color: #fff;
   border: 0;
-  color: #dfdbdf;
+  color: var(--button-theme);
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
@@ -103,7 +108,7 @@ h1 {
 }
 
 .action-btn.action-btn-big {
-  color: #cdc2d0;
+  color: var(--button-theme);
   font-size: 30px;
 }
 
