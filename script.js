@@ -58,7 +58,7 @@ function prevSong() {
 function nextSong() {
   songIndex++;
 
-  songIndex < songIndex.length - 1 && (songIndex = 0);
+  songIndex > songs.length - 1 && (songIndex = 0);
 
   loadSong(songs[songIndex]);
 
