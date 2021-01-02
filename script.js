@@ -93,8 +93,8 @@ function nextSong() {
 // Random song mode
 function shuffle() {
   randomMode = !randomMode;
-  // Random song index
-  songIndex = Math.floor(Math.random() * songs.length);
+  // If random mode just turned on, set song index to random number; otherwise, random mode was just turned off - songIndex will just be incremented in nextSong() if randomMode is false
+  randomMode && (songIndex = Math.floor(Math.random() * songs.length));
 
   randomMode
     ? shuffleBtn.querySelector('i.fas').classList.add('random-mode')
