@@ -12,6 +12,7 @@ const cover = document.getElementById('cover');
 // Song titles
 const songs = [
   'Christina Aguilera - Genie In a Bottle',
+  'Eminem - My Name Is',
   'TLC - No Scrubs',
   "Ricky Martin - Livin' la Vida Loca",
   'Len - Steal My Sunshine',
