@@ -10,10 +10,18 @@ const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 
 // Song titles
-const songs = ['hey', 'summer', 'ukulele'];
+const songs = [
+  'Christina Aguilera - Genie In a Bottle',
+  "Ricky Martin - Livin' la Vida Loca",
+  'Eiffel 65 - Blue (Da Ba Dee)',
+  '702 - Where My Girls At',
+  'Backstreet Boys - I Want It That Way',
+  'Britney Spears - (You Drive Me) Crazy',
+  "Destiny's Child - Say My Name",
+];
 
 // Keep track of song
-let songIndex = 2;
+let songIndex = 0;
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
