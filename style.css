@@ -123,6 +123,14 @@ h1 {
   outline: 0;
 }
 
+.random-mode {
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--button-theme);
+  padding: 0.5em;
+  border-radius: 10px;
+}
+
 .music-info {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 15px 15px 0 0;

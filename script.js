@@ -95,16 +95,17 @@ function nextSong() {
 // Random song mode
 function shuffle() {
   // Set random mode to true
-  randomMode = true;
+  randomMode = !randomMode;
   // Random song index
   songIndex = Math.floor(Math.random() * songs.length);
-  // TODO: Make sure don't get same number again
+
+  randomMode
+    ? shuffleBtn.querySelector('i.fas').classList.add('random-mode')
+    : shuffleBtn.querySelector('i.fas').classList.remove('random-mode');
 
   loadSong(songs[songIndex]);
 
   playSong();
-
-  // TODO: Add toggle functionality; if random mode is clicked again, set to false so next song is just next in line
 }
 
 // Update progress bar
