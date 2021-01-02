@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap");
 
 :root {
-  --button-theme: rgba(173, 17, 69, 0.7);
+  --button-theme: rgba(173, 17, 69, 0.8);
 }
 
 * {
