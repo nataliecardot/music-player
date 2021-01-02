@@ -15,6 +15,7 @@ const songs = [
   'Eminem - My Name Is',
   'TLC - No Scrubs',
   "Ricky Martin - Livin' la Vida Loca",
+  'Santana feat. Rob Thomas - Smooth',
   'Len - Steal My Sunshine',
   'Eiffel 65 - Blue (Da Ba Dee)',
   '702 - Where My Girls At',
