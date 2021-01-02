@@ -2,6 +2,7 @@ const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
+const shuffleBtn = document.getElementById('shuffle');
 
 const audio = document.getElementById('audio');
 const progress = document.getElementById('progress');
@@ -30,6 +31,9 @@ const songs = [
 // Keep track of song
 let songIndex = 0;
 
+// Random mode off by default
+let randomMode = false;
+
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
 
@@ -47,6 +51,8 @@ function playSong() {
   playBtn.querySelector('i.fas').classList.add('fa-pause');
 
   audio.play();
+
+  // TODO: make sure next song is random if random mode is on
 }
 
 // Pause song
@@ -71,13 +77,34 @@ function prevSong() {
 
 // Next song
 function nextSong() {
-  songIndex++;
+  // If random mode is true, get random index
+  if (randomMode) {
+    songIndex = Math.floor(Math.random() * songs.length);
+    console.log(songIndex);
+  } else {
+    songIndex++;
+  }
 
   songIndex > songs.length - 1 && (songIndex = 0);
 
   loadSong(songs[songIndex]);
 
   playSong();
+}
+
+// Random song mode
+function shuffle() {
+  // Set random mode to true
+  randomMode = true;
+  // Random song index
+  songIndex = Math.floor(Math.random() * songs.length);
+  // TODO: Make sure don't get same number again
+
+  loadSong(songs[songIndex]);
+
+  playSong();
+
+  // TODO: Add toggle functionality; if random mode is clicked again, set to false so next song is just next in line
 }
 
 // Update progress bar
@@ -115,6 +142,9 @@ playBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 
+// Random song (random song mode on)
+shuffleBtn.addEventListener('click', shuffle);
+
 document.addEventListener('keydown', (e) => {
   // keyCode is deprecated; see https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
 
@@ -132,7 +162,7 @@ document.addEventListener('keydown', (e) => {
   }
 
   // Consume the event so it doesn't get handled twice
-  e.preventDefault();
+  // e.preventDefault();
 });
 
 // Time/song update event
