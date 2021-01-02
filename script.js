@@ -98,7 +98,7 @@ playBtn.addEventListener('click', () => {
   const isPlaying = musicContainer.classList.contains('play');
 
   // When play button is clicked, it gets focused; when hitting spacebar after, browser can sometimes interpret it as an event from button. blur() fixes this bug
-  // HTMLElement.blur() method removes keyboard focus from the current element
+  // HTMLElement.blur() method removes keyboard focus from current element
   playBtn.blur();
 
   isPlaying ? pauseSong() : playSong();
