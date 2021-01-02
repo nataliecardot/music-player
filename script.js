@@ -51,8 +51,6 @@ function playSong() {
   playBtn.querySelector('i.fas').classList.add('fa-pause');
 
   audio.play();
-
-  // TODO: make sure next song is random if random mode is on
 }
 
 // Pause song
@@ -77,10 +75,9 @@ function prevSong() {
 
 // Next song
 function nextSong() {
-  // If random mode is true, get random index
+  // If random mode is true, get random index; otherwise, just increment to get next song in songs array
   if (randomMode) {
     songIndex = Math.floor(Math.random() * songs.length);
-    console.log(songIndex);
   } else {
     songIndex++;
   }
@@ -94,7 +91,6 @@ function nextSong() {
 
 // Random song mode
 function shuffle() {
-  // Set random mode to true
   randomMode = !randomMode;
   // Random song index
   songIndex = Math.floor(Math.random() * songs.length);
@@ -103,9 +99,12 @@ function shuffle() {
     ? shuffleBtn.querySelector('i.fas').classList.add('random-mode')
     : shuffleBtn.querySelector('i.fas').classList.remove('random-mode');
 
-  loadSong(songs[songIndex]);
+  // If random mode is true (i.e., random mode just set to true at top of this function) and button is clicked, it's just being turned off; don't want to go to next song - when next song starts, it will be next in original order, not random
+  if (randomMode) {
+    loadSong(songs[songIndex]);
 
-  playSong();
+    playSong();
+  }
 }
 
 // Update progress bar
