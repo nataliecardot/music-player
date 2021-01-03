@@ -21,6 +21,7 @@ const songs = [
   'Len - Steal My Sunshine',
   'Eiffel 65 - Blue (Da Ba Dee)',
   '702 - Where My Girls At',
+  'Red Hot Chili Peppers - Scar Tissue',
   'Macy Gray - I Try',
   'Mariah Carey - Heartbreaker',
   'Backstreet Boys - I Want It That Way',
