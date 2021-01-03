@@ -97,8 +97,8 @@ function shuffle() {
   randomMode && (songIndex = Math.floor(Math.random() * songs.length));
 
   randomMode
-    ? shuffleBtn.querySelector('i.fas').classList.add('random-mode')
-    : shuffleBtn.querySelector('i.fas').classList.remove('random-mode');
+    ? shuffleBtn.classList.add('random-mode')
+    : shuffleBtn.classList.remove('random-mode');
 
   // If random mode is true (i.e., random mode just set to true at top of this function) and button is clicked, it's just being turned off; don't want to go to next song - when next song starts, it will be next in original order, not random
   if (randomMode) {
