@@ -25,11 +25,13 @@ const songs = [
   'Macy Gray - I Try',
   'Mariah Carey - Heartbreaker',
   'Backstreet Boys - I Want It That Way',
+  'Smash Mouth - All Star',
   'Britney Spears - (You Drive Me) Crazy',
   "Destiny's Child - Say My Name",
   "Blink 182 - What's My Age Again",
   'Blaque - 808',
   'Will Smith - Wild Wild West',
+  'Cher - Believe',
   'Foo Fighters - Learn to Fly',
   'Sugar Ray - Every Morning',
 ];
