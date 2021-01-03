@@ -123,6 +123,10 @@ h1 {
   outline: 0;
 }
 
+.action-btn:hover {
+  transform: scale(1.1);
+}
+
 .action-btn.random-mode {
   border-width: 2px;
   border-style: solid;
