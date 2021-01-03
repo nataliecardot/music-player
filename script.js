@@ -28,6 +28,7 @@ const songs = [
   'Britney Spears - (You Drive Me) Crazy',
   "Destiny's Child - Say My Name",
   "Blink 182 - What's My Age Again",
+  'Blaque - 808',
   'Will Smith - Wild Wild West',
   'Sugar Ray - Every Morning',
 ];
