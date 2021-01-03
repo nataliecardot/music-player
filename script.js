@@ -30,6 +30,7 @@ const songs = [
   "Blink 182 - What's My Age Again",
   'Blaque - 808',
   'Will Smith - Wild Wild West',
+  'Foo Fighters - Learn to Fly',
   'Sugar Ray - Every Morning',
 ];
 
