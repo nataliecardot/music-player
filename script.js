@@ -28,6 +28,7 @@ const songs = [
   'Mariah Carey - Heartbreaker',
   'Backstreet Boys - I Want It That Way',
   'Smash Mouth - All Star',
+  'Lenny Kravitz - Fly Away',
   'Britney Spears - (You Drive Me) Crazy',
   "Destiny's Child - Say My Name",
   "Blink 182 - What's My Age Again",
