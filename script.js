@@ -21,12 +21,14 @@ const songs = [
   'Len - Steal My Sunshine',
   'Eiffel 65 - Blue (Da Ba Dee)',
   '702 - Where My Girls At',
+  'Macy Gray - I Try',
   'Mariah Carey - Heartbreaker',
   'Backstreet Boys - I Want It That Way',
   'Britney Spears - (You Drive Me) Crazy',
   "Destiny's Child - Say My Name",
   "Blink 182 - What's My Age Again",
   'Will Smith - Wild Wild West',
+  'Sugar Ray - Every Morning',
 ];
 
 // Keep track of song
