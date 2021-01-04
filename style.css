@@ -25,6 +25,7 @@ body {
 }
 
 h1 {
+  text-align: center;
   margin-bottom: 0.4em;
   letter-spacing: 2px;
   font-size: 2.6em;
@@ -47,7 +48,7 @@ h1 {
 .img-container {
   position: relative;
   width: 150px;
-  /* Half of height of song cover/"record". Needs to be so so that hole is properly aligned */
+  /* Half of height of song cover/"record." Needs to be this so hole is properly aligned */
   height: 75px;
 }
 
@@ -174,4 +175,37 @@ h1 {
   height: 100%;
   width: 0;
   transition: width 0.1s linear;
+}
+
+/* Smaller than tablet (same as small breakpoint in Bootstrap 4) */
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+
+  .music-container {
+    padding: 5px;
+  }
+
+  .music-info {
+    padding: 10px 10px 10px 80px;
+  }
+
+  .img-container {
+    width: 80px;
+    height: 40px;
+  }
+
+  .img-container img {
+    height: 80px;
+  }
+
+  .action-btn {
+    margin: 0 10px;
+  }
+
+  .action-btn:first-of-type {
+    margin-left: 5px;
+  }
 }
