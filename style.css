@@ -181,7 +181,7 @@ h1 {
 @media screen and (max-width: 767px) {
   h1 {
     font-size: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
   }
 
   .music-container {
