@@ -1,6 +1,6 @@
 # Music Player
 
-Vanilla JavaScript music player ultilizing the HTML5 audio API
+Music player made with vanilla JavaScript and the HTML5 audio element.
 
 ## Features
 
